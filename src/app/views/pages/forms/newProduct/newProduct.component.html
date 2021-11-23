@@ -1,0 +1,68 @@
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h6 class="card-title">Agregar producto</h6>
+                <form class="forms-sample" *ngIf="!submitted">
+                    <div class="form-group row">
+                        <label for="name" class="col-sm-3 col-form-label">Nombre</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Arroz con leche"
+                                   [(ngModel)]="product.name">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="description" class="col-sm-3 col-form-label">Descripcion</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="description" autocomplete="off"
+                                   name="description"
+                                   placeholder="Arroz con leche, con toques de canela, siempre fresco."
+                                   [(ngModel)]="product.description">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="price" class="col-sm-3 col-form-label">Precio</label>
+                        <div class="col-sm-9">
+                            <input type="number" class="form-control" id="price" name="price" autocomplete="off"
+                                   [(ngModel)]="product.price">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="rate_type" class="col-sm-3 col-form-label">Tipo de tarifa</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="rate_type" autocomplete="off" name="quantity"
+                                   [(ngModel)]="product.rate_type">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="type" class="col-sm-3 col-form-label">Servicio</label>
+                        <div class="col-sm-9">
+                            <select
+                                    class="form-control"
+                                    id="type"
+                                    name="type"
+                                    [(ngModel)]="product.service">
+                                <option *ngFor="let service of services" [ngValue]="service.uuid"> {{ service.name }}
+                                    (Id: {{ service.uuid }})
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary mr-2" (click)="save()">Crear</button>
+                </form>
+
+                <div class="row ">
+                    <div class="" *ngIf="submitted">
+                        <h6>El producto se agrego correctamente</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

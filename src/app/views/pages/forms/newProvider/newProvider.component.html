@@ -1,0 +1,53 @@
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h6 class="card-title">Agregar proveedor</h6>
+                <form class="forms-sample" *ngIf="!submitted">
+                    <div class="form-group row">
+                        <label for="company_name" class="col-sm-3 col-form-label">Nombre de la compania</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="company_name" name="company_name" placeholder="AR Fotografia"
+                                   [(ngModel)]="obj.company_name">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="rate_type" class="col-sm-3 col-form-label">Suscripcion</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="rate_type" autocomplete="off" name="quantity"
+                                   [(ngModel)]="obj.subscription">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="type" class="col-sm-3 col-form-label">Usuario</label>
+                        <div class="col-sm-9">
+                            <select
+                                    class="form-control"
+                                    id="type"
+                                    name="type"
+                                    [(ngModel)]="obj.user">
+                                <option *ngFor="let iterObj of users" [ngValue]="iterObj.uuid"> {{ iterObj.email }}
+                                    (Id: {{ iterObj.uuid }})
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary mr-2" (click)="save()">Crear</button>
+                </form>
+
+                <div class="row ">
+                    <div class="" *ngIf="submitted">
+                        <h6>El proveedor se agrego correctamente</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

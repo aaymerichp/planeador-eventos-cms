@@ -1,0 +1,1 @@
+export const HOST = 'http://34.125.252.174/api/planeador_eventos_api'

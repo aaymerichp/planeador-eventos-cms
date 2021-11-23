@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-md-12 stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h6 class="card-title">Productos</h6>
+                <div class="table-responsive">
+                    <table id="productDataTable" class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th>Servicio</th>
+                            <th>Nombre</th>
+                            <th>Descripcion</th>
+                            <th>Precio</th>
+                            <th>Tipo de tarifa</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr
+                                *ngFor="let product of products; let i = index"
+                                [class.active]="i == currentProduct"
+                        >
+                            <td>{{ product.service }}</td>
+                            <td>{{ product.name }}</td>
+                            <td>{{ product.description }}</td>
+                            <td>{{ product.price }}</td>
+                            <td>{{ product.rate_type }}</td>
+                            <td><a routerLink="{{ product.uuid }}">Ver detalles</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<router-outlet></router-outlet>
+
