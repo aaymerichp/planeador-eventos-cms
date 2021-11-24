@@ -1,5 +1,5 @@
 {
-  "name": "exam1",
+  "name": "planeador-eventos-cms",
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "prod": "lite-server"
   },
   "private": true,
   "dependencies": {
@@ -37,6 +38,7 @@
     "chart.js": "^2.9.3",
     "compass-mixins": "^0.12.10",
     "cropperjs": "^1.5.7",
+    "express": "^4.17.1",
     "feather-icons": "^4.28.0",
     "flag-icon-css": "^3.5.0",
     "metismenujs": "^1.2.1",
