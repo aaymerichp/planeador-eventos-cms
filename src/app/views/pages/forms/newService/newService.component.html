@@ -1,0 +1,77 @@
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h6 class="card-title">Agregar servicio</h6>
+                <form class="forms-sample" *ngIf="!submitted">
+                    <div class="form-group row">
+                        <label for="name" class="col-sm-3 col-form-label">Nombre</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="name" autocomplete="off" name="name"
+                                   [(ngModel)]="obj.name">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="description" class="col-sm-3 col-form-label">Descripcion</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="description" name="description" placeholder="AR Fotografia"
+                                   [(ngModel)]="obj.description">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="type" class="col-sm-3 col-form-label">Tipo</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="type" name="type" placeholder="AR Fotografia"
+                                   [(ngModel)]="obj.type">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="provincia" class="col-sm-3 col-form-label">Provincia</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="provincia" name="provincia" placeholder="AR Fotografia"
+                                   [(ngModel)]="obj.provincia">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="canton" class="col-sm-3 col-form-label">Canton</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="canton" name="canton" placeholder="AR Fotografia"
+                                   [(ngModel)]="obj.canton">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="provider" class="col-sm-3 col-form-label">Proveedor</label>
+                        <div class="col-sm-9">
+                            <select
+                                    class="form-control"
+                                    id="provider"
+                                    name="provider"
+                                    [(ngModel)]="obj.provider">
+                                <option *ngFor="let iterObj of providers" [ngValue]="iterObj.uuid"> {{ iterObj.company_name }}
+                                    (Id: {{ iterObj.uuid }})
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary mr-2" (click)="save()">Crear</button>
+                </form>
+
+                <div class="row ">
+                    <div class="" *ngIf="submitted">
+                        <h6>El proveedor se agrego correctamente</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

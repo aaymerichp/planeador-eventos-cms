@@ -11,7 +11,10 @@ import {ProviderComponent} from "./views/pages/forms/provider/provider.component
 import {ProvidersDataTableComponent} from "./views/pages/tables/providersDataTable/providersDataTable.component";
 import {NewProviderComponent} from "./views/pages/forms/newProvider/newProvider.component";
 
+import {ServiceComponent} from "./views/pages/forms/service/service.component";
 import {ServicesDataTableComponent} from "./views/pages/tables/servicesDataTable/servicesDataTable.component";
+import {NewServiceComponent} from "./views/pages/forms/newService/newService.component";
+
 const routes: Routes = [
     {
         path: '',
@@ -54,11 +57,11 @@ const routes: Routes = [
             },
             {
                 path: 'services/:uuid',
-                component: ProviderComponent
+                component: ServiceComponent
             },
             {
                 path: 'new-service',
-                component: NewProviderComponent,
+                component: NewServiceComponent,
                 pathMatch: 'full'
             },
             {path: '', redirectTo: 'dashboard', pathMatch: 'full'},

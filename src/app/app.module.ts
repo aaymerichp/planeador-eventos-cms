@@ -20,6 +20,8 @@ import {ProviderComponent} from "./views/pages/forms/provider/provider.component
 import {NewProviderComponent} from "./views/pages/forms/newProvider/newProvider.component";
 import {ProvidersDataTableComponent} from "./views/pages/tables/providersDataTable/providersDataTable.component";
 
+import {ServiceComponent} from "./views/pages/forms/service/service.component";
+import {NewServiceComponent} from "./views/pages/forms/newService/newService.component";
 import {ServicesDataTableComponent} from "./views/pages/tables/servicesDataTable/servicesDataTable.component";
 import {HIGHLIGHT_OPTIONS} from 'ngx-highlightjs';
 
@@ -33,6 +35,8 @@ import {HIGHLIGHT_OPTIONS} from 'ngx-highlightjs';
         ProviderComponent,
         NewProviderComponent,
         ProvidersDataTableComponent,
+        ServiceComponent,
+        NewServiceComponent,
         ServicesDataTableComponent
     ],
     imports: [

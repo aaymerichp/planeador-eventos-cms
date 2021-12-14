@@ -27,7 +27,7 @@ export class APICallerService {
   }
 
   create(data): Observable<any> {
-    return this.http.post(`${HOST}/${this.entityEndpoint}/create/`, data);
+    return this.http.post(`${HOST}/${this.entityEndpoint}/create`, data);
   }
 
   update(uuid, data): Observable<any> {

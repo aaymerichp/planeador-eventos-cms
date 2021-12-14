@@ -43,18 +43,18 @@ export const MENU: MenuItem[] = [
     icon: 'file-plus',
     link: 'new-service'
   },
-  {
-    label: 'Suscripciones',
-    isTitle: true,
-  },
-  {
-    label: 'Ver suscripciones',
-    icon: 'layout',
-    link: 'suscriptions'
-  },
-  {
-    label: 'Agregar suscripciones',
-    icon: 'file-plus',
-    link: 'new-suscription'
-  }
+  // {
+  //   label: 'Suscripciones',
+  //   isTitle: true,
+  // },
+  // {
+  //   label: 'Ver suscripciones',
+  //   icon: 'layout',
+  //   link: 'suscriptions'
+  // },
+  // {
+  //   label: 'Agregar suscripciones',
+  //   icon: 'file-plus',
+  //   link: 'new-suscription'
+  // }
 ];
